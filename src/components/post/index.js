@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Avatar, Icon, Comment, Tooltip, Input, Button } from 'antd'
 import moment from 'moment'
 
@@ -9,7 +9,7 @@ const { TextArea } = Input;
 
 const Index = (props) => {
 
-const { data, postComment, user, userContent, likeCount, avatar, img } = props
+const { data, user, userContent, likeCount, avatar, img } = props
 
   const [commentText, setCommentText] = useState('')
   const [showComment, setShowComment] = useState(false)
@@ -93,7 +93,7 @@ const { data, postComment, user, userContent, likeCount, avatar, img } = props
           <Comment
             key={k}
             actions={actions}
-            author={<a>{v.author}</a>}
+            author={v.author}
             avatar={
               <Avatar
                 src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"

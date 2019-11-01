@@ -13,7 +13,7 @@ const index = (props) => {
     e.preventDefault()
     props.form.validateFields((err, values) => {
       if (!err) {
-        props.history.push('/newsFeed')
+        props.history.push('bookReview/newsFeed')
       }
     })
   }
@@ -56,7 +56,7 @@ const index = (props) => {
             <Button type="primary" htmlType="submit" className="login-form-button">
               Log in
           </Button>
-            Or <a href="/register">register now!</a>
+            Or <a href="bookReview/register">register now!</a>
           </Form.Item>
         </Form>
       </div>
