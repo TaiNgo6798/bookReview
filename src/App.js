@@ -26,7 +26,7 @@ const App = (props) => {
                 }}
               />
             ))}
-            <Redirect to='/' />
+            <Redirect to='/bookReview/' />
           </Switch>
         </Router>
     </Suspense>
