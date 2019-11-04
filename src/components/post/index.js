@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Avatar, Icon, Comment, Tooltip, Input, Button } from 'antd'
 import moment from 'moment'
 
@@ -9,7 +9,8 @@ const { TextArea } = Input;
 
 const Index = (props) => {
 
-const { data, user, userContent, likeCount, avatar, img } = props
+const { data, postComment, user, likeCount, img } = props
+const { userContent, avatar, firstName } = user
 
   const [commentText, setCommentText] = useState('')
   const [showComment, setShowComment] = useState(false)
@@ -23,7 +24,7 @@ const { data, user, userContent, likeCount, avatar, img } = props
 
     const postCommentHandler = () => {
       let newComment = {
-        author: user,
+        author: 'current user',
         comment: commentText,
         action: null,
         likes: "0",
@@ -121,10 +122,10 @@ const { data, user, userContent, likeCount, avatar, img } = props
       <div className='postForm'>
         <div className='header'>
           <div className='avatar'>
-            <Avatar size={40} src={avatar}/>
+            <Avatar size={45} src={avatar}/>
           </div>
           <div className='username'>
-            <h3><i>{user}</i></h3>
+            <h3><i>{firstName}</i></h3>
           </div>
         </div>
         <div className='body'>
@@ -142,7 +143,7 @@ const { data, user, userContent, likeCount, avatar, img } = props
         </div>
 
         <div className='userContent'>
-          <p>{user}</p>
+          <p>{firstName}</p>
           <p>{userContent}</p>
         </div>
 

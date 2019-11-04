@@ -4,17 +4,19 @@
   padding-top: 60px;
   display: flex;
   justify-content: center;
+  padding-top: 150px;
+  
 }
 
 .wrapper{
   height: fit-content;
-  width: 900px;
+  width: 950px;
   display: flex;
   .posts{
-    width: 70%;
+    width: 65%;
     margin-right: 3em;
   }
   .infor{
-    width: 30%;
+    width: 35%;
   }
 }

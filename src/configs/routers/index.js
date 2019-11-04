@@ -2,17 +2,17 @@
 export const routers = [
   {
     exact: true,
-    path: 'bookReview/login',
+    path: '/login',
     component: 'login'
   },
   {
     exact: true,
-    path: 'bookReview/',
+    path: '/',
     component: 'login'
   },
   {
     exact: true,
-    path: 'bookReview/newsFeed',
+    path: '/newsFeed',
     component: 'newsFeed'
   },
 
